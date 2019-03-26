@@ -98,7 +98,7 @@ Unattended-Upgrade::InstallOnShutdown "true";
 // 'mailx' must be installed. E.g. "user@example.com"
 //Unattended-Upgrade::Mail "root";
 {%- if email_address != 'root' %}
-Unattended-Upgrade::Mail "{{ email_address }}"
+Unattended-Upgrade::Mail "{{ email_address }}";
 {%- endif %}
 
 // Set this value to "true" to get emails only on errors. Default
