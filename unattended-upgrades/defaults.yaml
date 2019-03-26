@@ -1,0 +1,34 @@
+unattended-upgrades:
+  pkgs:
+    - unattended-upgrades
+  service: unattended-upgrades
+  config_unattended: '/etc/apt/apt.conf.d/50unattended-upgrades'
+  config_auto:
+    path: '/etc/apt/apt.conf.d/20auto-upgrades'
+    update_package_lists: '1'
+    unattended_upgrade: '1'
+    custom: False
+  
+  pattern: 
+    - security 
+    #- stable 
+    #- stable-updates 
+    #- proposed-updates
+  pattern_custom: False
+  blacklist: False
+  auto_fix_interrupted: True
+  minimal_steps: False
+  install_on_shutdown: False
+  email_address: 'root'
+  email_only_error: False
+  remove_unused_dependencies: True
+  auto_reboot: False
+  reboot_with_users: False
+  auto_reboot_time: 'now'         # 02:00
+  dl_limit: False                 # 70 (for 70kb/sec)
+  to_syslog: False
+  syslog_facility: 'daemon'
+  
+  
+  
+

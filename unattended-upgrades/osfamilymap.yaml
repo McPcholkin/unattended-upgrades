@@ -1,0 +1,9 @@
+Debian:
+  pkgs:
+    - unattended-upgrades
+  service: unattended-upgrades
+  config_unattended: '/etc/apt/apt.conf.d/50unattended-upgrades'
+  config_auto: 
+    path: '/etc/apt/apt.conf.d/20auto-upgrades'
+  
+
